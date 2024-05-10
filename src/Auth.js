@@ -13,7 +13,7 @@ export default function Auth() {
         .then((res) => {
           console.log(res.data.token);
           localStorage.setItem("token", res.data.token);
-          navigate("/holdings");
+          navigate("/");
         })
         .catch((e) => {
           navigate("/");

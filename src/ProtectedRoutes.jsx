@@ -1,13 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Outlet  } from "react-router-dom";
+import Home from './Home';
+import { isExpired, decodeToken } from "react-jwt";
 
-export class ProtectedRoutes extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
+
+const checkAuth = () => {
+  if(localStorage.getItem("token" == null)){
+    return false;
   }
+  if(isExpired(localStorage.getItem("token"))){
+    localStorage.removeItem("token")
+    return false;
+  }
+  return true;
 }
 
-export default ProtectedRoutes
+export default function ProtectedRoutes() {
+  return checkAuth() ? <Outlet/> : <Home/>;
+
+}

@@ -10,9 +10,9 @@ function Home() {
     }
   };
 
-  // if (localStorage.getItem("token") != null) {
-  //   return "login successful";
-  // }
+  if (localStorage.getItem("token") != null) {
+    return "User login successful ";
+  }
 
   return (
     <Button className="button" type="primary" onClick={login}>

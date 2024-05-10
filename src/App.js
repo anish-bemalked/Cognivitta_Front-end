@@ -9,6 +9,7 @@ import Funds from "./Funds";
 import Home from "./Home";
 import Auth from "./Auth";
 import ErrorPage from "./ErrorPage";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 function App() {
   return (
@@ -18,10 +19,14 @@ function App() {
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/holdings" element={<Holdings />} />
-          <Route path="/positions" element={<Positions />} />
-          <Route path="/funds" element={<Funds />} />
-          <Route path="/orders" element={<Orders />} />
+
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/holdings" element={<Holdings />} />
+            <Route path="/positions" element={<Positions />} />
+            <Route path="/funds" element={<Funds />} />
+            <Route path="/orders" element={<Orders />} />
+          </Route>
+
           <Route path="/" element={<Home />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
