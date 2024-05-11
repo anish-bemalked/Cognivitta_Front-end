@@ -11,6 +11,7 @@ function Home() {
   };
 
   if (localStorage.getItem("token") != null) {
+    console.log(localStorage.getItem("token"));
     return "User login successful ";
   }
 

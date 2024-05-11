@@ -13,7 +13,7 @@ export default function Holdings() {
       },
     };
     const response = await axios(config);
-    setHoldings(response.data.data);
+    setHoldings(response.data);
   };
 
   useEffect(() => {

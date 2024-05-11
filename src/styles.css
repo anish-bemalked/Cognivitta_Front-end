@@ -11,6 +11,7 @@ body {
   margin: 1rem;
   text-align: center;
 }
+
 .site-title {
   font-size: 1.25rem;
   font-weight: 500;
@@ -47,7 +48,17 @@ body {
 .nav li.active {
   border-bottom: 3px solid rgb(0, 97, 226);
 }
+
 .nav li:hover {
+  background-color: rgb(240, 240, 240);
+  color: rgb(0, 97, 226);
+}
+
+.dropdown-menu {
+  display: flex;
+  align-items: center;
+}
+.dropdown-menu:hover {
   background-color: rgb(240, 240, 240);
   color: rgb(0, 97, 226);
 }
