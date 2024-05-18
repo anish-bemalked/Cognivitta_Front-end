@@ -1,0 +1,264 @@
+h2 {
+  margin-bottom: 5px;
+  padding-bottom: 10px; 
+}
+* {
+    margin: 0;
+    border: border-box;
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  h1 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-section1 {
+    background-image: url("https://www.businesssetup.com/sites/default/files/trading-info.jpg");
+  
+    height: 400px;
+    width: 47%;
+    background-size: cover;
+    margin-bottom: 40px;
+  }
+  
+  .display1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .display2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .get-notified-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gnb {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #387ed1;
+  }
+  
+  .gnb a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .hero-section2 {
+    height: 400px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pic {
+    height: 400px;
+    width: 450px;
+  }
+  
+  .pic1 {
+    background-image: url("https://www.open.edu/openlearn/3c/99/3c990ad88e995bcd2ce010014c569ec22801ef32?response-content-disposition=inline%3Bfilename%3D%22b126_u01_s02_f01.tif.jpg%22&response-content-type=image%2Fjpeg&Expires=1715581800&Signature=sKk0fMkosdD6TIH4DOOuAYC4f2-rblFpDEjewUOD-dWRnS7dXXgOC3KeNKy23bnvN5o9F06elMwNPW-7Qxu7lP5wHC2nEa38PnLWXPz7VJaXB8HcmYeACoI94XXqqjIGYDELBDMJoomTngAHzlzqz1qm8CnOtmuTR1s107pzj~YUmFNIOZflJHO916LtBa-ZwXzzNWW5dYNqKsF91DrQ327Uamk0h2ajFtr36NvzS6CjFP6dxCbzQ3ksZ7b0WaK-k~U0FruTqmBmAcHET2PoGA8JOdEsPC~JXMC-suqyspjqvX1N33qzeQw6XLHxC-CuHPFXuzd3GaQmR-dg4YloUA__&Key-Pair-Id=K87HJKWMK329B");
+  
+    background-size: cover;
+  
+    height: 400px;
+    width: 500px;
+  }
+  
+  .display3 {
+    margin-top: 10px;
+    margin-left: 100px;
+    text-align: center;
+  }
+  
+  .display4 {
+    margin-bottom: 10px;
+  }
+  .hero-section3 {
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 75px;
+  }
+  
+  .pic2 {
+    margin-left: 100px;
+    height: 400px;
+    width: 400px;
+  }
+  
+  .pic3 {
+    background-image: url("https://www.taskray.com/wp-content/uploads/taskray-blog-summer-investing-cs-1080x675.jpg.webp");
+  
+    background-size: cover;
+    height: 350px;
+    width: 550px;
+  }
+  
+  .display6 {
+    margin-top: 10px;
+    justify-content: center;
+    /* margin-left: 100px; */
+    text-align: center;
+  }
+  
+  .display7 {
+    margin-bottom: 10px;
+  }
+  
+  .display1 {
+    text-align: center;
+  }
+  
+  .display2 {
+    margin-top: 10px;
+  }
+  footer {
+    background-color: black;
+    color: rgba(255, 255, 255, 0.85);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  h1 {
+    margin-top: 50px;
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Arial", sans-serif; /* Change the font family if needed */
+    font-size: 20px; /* Reduce the font size */
+    font-weight: normal; /* Remove the bold styling */
+    padding-left: 60px; /* Increase the padding threefold */
+}
+
+
+.main-container {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+}
+.sub-container-1 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 384px;
+  gap: 152px;
+  max-width: 931px;
+  margin: 0px auto;
+  font-family: Roboto, sans-serif;
+  color: var(--textColor);
+}
+.sub-container-2 {
+  height: 100%;
+  padding: 92px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.sub-container-3 {
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+margin-top: 20px;
+}
+.brand-name {
+  width: 185px;
+  padding: 6px 0px 25px;
+  font-size: x-large;
+  font-weight: 500;
+  line-height: 1.6;
+margin-bottom: 20px;
+}
+.sub-container-4 {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+ margin-top: 20px;
+}
+
+.sub-container-5 {
+  border: 1px solid rgb(210, 220, 230);
+  padding: 20px 0px 24px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ margin-top: 20px;
+}
+.login-buttons {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+}
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  margin-top: 80px;
+}
+
+.login-text {
+  font-weight: bold;
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+.button {
+  color: white;
+  background-color: rgb(0, 97, 226);
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin: 4px;
+}
+
+.button:hover {
+  background-color: rgb(0, 80, 188);
+}
+
+

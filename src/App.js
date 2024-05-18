@@ -10,6 +10,9 @@ import Home from "./Home";
 import Auth from "./Auth";
 import ErrorPage from "./ErrorPage";
 import ProtectedRoutes from "./ProtectedRoutes";
+import Logout from "./Logout";
+import Account from "./Account";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -25,12 +28,15 @@ function App() {
             <Route path="/positions" element={<Positions />} />
             <Route path="/funds" element={<Funds />} />
             <Route path="/orders" element={<Orders />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/account" element={<Account />} />
           </Route>
 
           <Route path="/" element={<Home />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }

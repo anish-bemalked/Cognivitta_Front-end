@@ -4,7 +4,7 @@ import Home from './Home';
 import { isExpired, decodeToken } from "react-jwt";
 
 
-const checkAuth = () => {
+export const checkAuth = () => {
   if(localStorage.getItem("token" == null)){
     return false;
   }
@@ -19,3 +19,5 @@ export default function ProtectedRoutes() {
   return checkAuth() ? <Outlet/> : <Home/>;
 
 }
+
+
