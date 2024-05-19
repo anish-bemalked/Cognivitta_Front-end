@@ -51,7 +51,15 @@ export default function Positions() {
 
   return (
     <>
-      <h1>Positions</h1>
+      <h1
+        style={{
+          textShadow: "none",
+          fontFamily: "Montserrat",
+          paddingBottom: "10px",
+        }}
+      >
+        Positions
+      </h1>
       <Table dataSource={positions} columns={columns} />
     </>
   );

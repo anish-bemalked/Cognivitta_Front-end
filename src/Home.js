@@ -35,7 +35,15 @@ function Home() {
   if (checkAuth()) {
     return (
       <>
-        <h1>Welcome {name}</h1>
+        <h1
+          style={{
+            textShadow: "none",
+            fontFamily: "Montserrat",
+            paddingBottom: "10px",
+          }}
+        >
+          Welcome {name}
+        </h1>
         <div class="hero-section">
           <div class="hero-section1"></div>
         </div>

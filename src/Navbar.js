@@ -40,7 +40,7 @@ export default function Navbar() {
         <CustomLink to="/orders" className="Component">
           Orders
         </CustomLink>
-        <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/about">About Us</CustomLink>
         <div className="dropdown-menu">
           <Dropdown.Button
             overlay={

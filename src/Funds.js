@@ -25,7 +25,15 @@ export default function Funds() {
     <>
       <Row gutter={12}>
         <Col span={24}>
-          <h1>Commodity</h1>
+          <h1
+            style={{
+              textShadow: "none",
+              fontFamily: "Montserrat",
+              paddingBottom: "10px",
+            }}
+          >
+            Commodity
+          </h1>
         </Col>
         <Col span={7}>
           <Statistic
@@ -49,7 +57,15 @@ export default function Funds() {
         </Col>
 
         <Col span={24}>
-          <h1>Equity</h1>
+          <h1
+            style={{
+              textShadow: "none",
+              fontFamily: "Montserrat",
+              paddingBottom: "10px",
+            }}
+          >
+            Equity
+          </h1>
         </Col>
         <Col span={7}>
           <Statistic
