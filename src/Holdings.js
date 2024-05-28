@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState, useContext, useRef } from "react";
 import { Table, Form, Input } from "antd";
 import { Row, Col, Statistic } from "antd";
+import { Pie } from "react-chartjs-2";
+import { Chart as ChartJS } from "chart.js/auto";
 
 const fetchLTP = async (instrument_token) => {
   const config = {
@@ -24,6 +26,20 @@ const editLabel = async (row) => {
     data: row,
   };
   const response = await axios(config);
+};
+
+const generateRandomColor = () => {
+  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+};
+
+const getBackgroundColors = (length) => {
+  var backgroundColors = [];
+
+  for (var i = 0; i < length; i++) {
+    backgroundColors.push(generateRandomColor());
+  }
+
+  return backgroundColors;
 };
 
 const EditableContext = React.createContext(null);
@@ -111,6 +127,7 @@ export default function Holdings() {
   const [filteredReturn, setFilteredReturn] = useState(null);
   const [netInvestedAmount, setNetInvestedAmount] = useState(null);
   const [netCurrentValue, setNetCurrentValue] = useState(null);
+  const [userData, setUserData] = useState([]);
   const data = [];
 
   const handleSave = (row) => {
@@ -179,18 +196,11 @@ export default function Holdings() {
     fetchHoldings();
   }, []);
 
+  useEffect(() => {
+    calculateFilteredData(holdings);
+  }, [holdings]);
+
   const calculateFilteredData = (filteredData) => {
-    // const netPnL = filteredData.reduce((acc, curr) => acc + curr.pnl, 0);
-    // setFilteredPnL(netPnL.toFixed(2));
-
-    // const totalCost = filteredData.reduce(
-    //   (acc, curr) =>
-    //     acc + curr.average_price * (curr.quantity + curr.t1_quantity),
-    //   0
-    // );
-    // const netReturn = ((netPnL / totalCost) * 100).toFixed(2);
-    // setFilteredReturn(netReturn);
-
     const netPnL = filteredData.reduce((acc, curr) => acc + curr.pnl, 0);
     setFilteredPnL(netPnL.toFixed(2));
 
@@ -212,6 +222,19 @@ export default function Holdings() {
 
     setNetInvestedAmount(netInvestment.toFixed(2));
     setNetCurrentValue(netCurrentValue.toFixed(2));
+
+    const labels = filteredData.map((data) => data.tradingsymbol);
+    const datasets = [
+      {
+        label: "Current Value",
+        data: filteredData.map(
+          (data) => (data.quantity + data.t1_quantity) * data.ltp
+        ),
+        backgroundColor: getBackgroundColors(filteredData.length),
+      },
+    ];
+
+    setUserData({ labels, datasets });
   };
 
   const defaultColumns = [
@@ -279,6 +302,19 @@ export default function Holdings() {
     calculateFilteredData(extra.currentDataSource);
   };
 
+  const options = {
+    plugins: {
+      legend: {
+        display: true,
+        position: "bottom",
+        labels: {
+          usePointStyle: true,
+          pointStyle: "rect",
+        },
+      },
+    },
+  };
+
   return (
     <>
       <h1
@@ -337,6 +373,11 @@ export default function Holdings() {
                     title="Net Current Value"
                     value={netCurrentValue ?? 0}
                   />
+                </Col>
+                <Col>
+                  <div style={{ marginLeft: "27px", marginTop: "25px" }}>
+                    <Pie data={userData} options={options} />
+                  </div>
                 </Col>
               </Row>
             </div>
