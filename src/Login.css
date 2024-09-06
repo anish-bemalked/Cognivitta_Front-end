@@ -79,12 +79,12 @@ h2 {
   }
   
   .pic1 {
-    background-image: url("https://www.open.edu/openlearn/3c/99/3c990ad88e995bcd2ce010014c569ec22801ef32?response-content-disposition=inline%3Bfilename%3D%22b126_u01_s02_f01.tif.jpg%22&response-content-type=image%2Fjpeg&Expires=1715581800&Signature=sKk0fMkosdD6TIH4DOOuAYC4f2-rblFpDEjewUOD-dWRnS7dXXgOC3KeNKy23bnvN5o9F06elMwNPW-7Qxu7lP5wHC2nEa38PnLWXPz7VJaXB8HcmYeACoI94XXqqjIGYDELBDMJoomTngAHzlzqz1qm8CnOtmuTR1s107pzj~YUmFNIOZflJHO916LtBa-ZwXzzNWW5dYNqKsF91DrQ327Uamk0h2ajFtr36NvzS6CjFP6dxCbzQ3ksZ7b0WaK-k~U0FruTqmBmAcHET2PoGA8JOdEsPC~JXMC-suqyspjqvX1N33qzeQw6XLHxC-CuHPFXuzd3GaQmR-dg4YloUA__&Key-Pair-Id=K87HJKWMK329B");
-  
+    background-image: url("images/logos.png");
+    margin-top: 50px;
     background-size: cover;
   
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
   }
   
   .display3 {
@@ -259,4 +259,12 @@ margin-bottom: 20px;
 
 .button:hover {
   background-color: rgb(0, 80, 188);
+}
+
+.pic4{
+  height: 350px;
+  width: 800px;
+  background-image: url("images/img.jpg");
+  background-size: cover;
+
 }

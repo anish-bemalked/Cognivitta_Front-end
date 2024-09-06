@@ -33,74 +33,67 @@ function Home() {
   }, []);
 
   if (checkAuth()) {
-    return (
-      <>
-        <h1
-          style={{
-            textShadow: "none",
-            fontFamily: "Montserrat",
-            paddingBottom: "10px",
-          }}
-        >
-          Welcome {name}
-        </h1>
-        <div class="hero-section">
-          <div class="hero-section1"></div>
+    return (<div className="main-container">
+      <div className="sub-container-1">
+        <div className="sub-container-2">
+          <div className="sub-container-3">
+            <div>
+              <p><h2 >Trust with confidence</h2></p>
+              <br></br>
+              
+              <div className="description">
+                <p>
+                  <h3>No spam or gimmicks</h3>
+                  That's why 1.5+ crore customers trust Zerodha with ₹4.5+ lakh crores of equity investments and contribute to 15% of daily retail exchange volumes in India.
+                  <br></br>
+                  <br></br>
+                  <h3>Customer-first always</h3>
+                  That's why 1.5+ crore customers trust Zerodha with ₹4.5+ lakh crores of equity investments and contribute to 15% of daily retail exchange volumes in India.
+                  <br></br>
+                  <br></br>
+
+                  <h3>The Zerodha universe</h3>
+                  Not just an app, but a whole ecosystem. Our investments in 30+ fintech startups offer you tailored services specific to your needs.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="display1">
-          <h2>
-            Manage your Portfolio better with Cognivitta
-            <br />
+        <div className="sub-container-4">
+          
+            <div className="pic">
+            <div class="pic1"></div>
+
+            </div>
+
+          
+        </div>
+        
+      </div>
+      <div className="sub-container-2">
+        <h2>Everything you need</h2>
+        <div className="sub-container-4">
+          <div className="pic4"></div>
+        </div>
+        <div className="sub-container-4">
+          <h2>Invest in everything
           </h2>
-        </div>
-        <div class="display2">
-          <p>
-            Online platform to tailor, organize and personalize your Portfolio
+          <br></br>
+          <p>Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.
           </p>
         </div>
-        <div class="hero-section2">
-          <div class="pic">
-            <div class="pic1"></div>
-          </div>
 
-          <div class="display3">
-            <div class="display4">
-              <h2>Categorize your Portfolio</h2>
-            </div>
 
-            <div class="display5">
-              <p>
-                Divide your portfolio into distinct segments <br />
-                to risk, sector, or investment style.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="hero-section3">
-          <div class="display6">
-            <div class="display7">
-              <h2>Unified platform</h2>
-            </div>
 
-            <div class="display8">
-              <p>
-                Consolidation of holdings across
-                <br />
-                various Demat accounts.
-              </p>
-            </div>
-          </div>
-
-          <div class="pic2">
-            <div class="pic3"></div>
-          </div>
-        </div>
-      </>
+      </div>
+      
+    </div>
+    
     );
   }
 
   return (
-    <div className="main-container">
+<div className="main-container">
       <div className="sub-container-1">
         <div className="sub-container-2">
           <div className="sub-container-3">
@@ -112,9 +105,11 @@ function Home() {
                   <h3>Manage your Portfolio better with Cognivitta</h3>
                   Online platform to tailor, organize, and personalize your
                   Portfolio
+                  <br></br>
                   <h3>Categorize your Portfolio</h3>
                   Divide your portfolio into distinct segments by risk, sector,
                   or investment style.
+                  <br></br>
                   <h3>Unified platform</h3>
                   Consolidation of holdings across various Demat accounts.
                 </p>
@@ -165,7 +160,8 @@ function Home() {
         </div>
       </div>
     </div>
-  );
+);
+
 }
 
 export default Home;
