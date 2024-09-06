@@ -222,6 +222,7 @@ margin-bottom: 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
  margin-top: 20px;
+ border-radius: 0.5rem;
 }
 .login-buttons {
   background-repeat: no-repeat;
@@ -233,21 +234,20 @@ margin-bottom: 20px;
   justify-content: center;
   gap: 8px;
   margin-bottom: 16px;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .login-text {
   font-weight: bold;
   font-size: 16px;
-
   line-height: 1.6;
 }
 
 .button {
-  color: white;
-  background-color: rgb(0, 97, 226);
+  color: black;
+  background-color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 32px 24px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: flex;
@@ -258,7 +258,7 @@ margin-bottom: 20px;
 }
 
 .button:hover {
-  background-color: rgb(0, 80, 188);
+  background-color: #f0f0f0;
 }
 
 .pic4{
